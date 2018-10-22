@@ -1,30 +1,3 @@
-﻿/*
- * Advanced C# messenger by Ilya Suzdalnitski. V1.0
- * 
- * Based on Rod Hyde's "CSharpMessenger" and Magnus Wolffelt's "CSharpMessenger Extended".
- * 
- * Features:
- 	* Prevents a MissingReferenceException because of a reference to a destroyed message handler.
- 	* Option to log all messages
- 	* Extensive error detection, preventing silent bugs
- * 
- * Usage examples:
- 	1. Messenger.AddListener<GameObject>("prop collected", PropCollected);
- 	   Messenger.Broadcast<GameObject>("prop collected", prop);
- 	2. Messenger.AddListener<float>("speed changed", SpeedChanged);
- 	   Messenger.Broadcast<float>("speed changed", 0.5f);
- * 
- * Messenger cleans up its evenTable automatically upon loading of a new level.
- * 
- * Don't forget that the messages that should survive the cleanup, should be marked with Messenger.MarkAsPermanent(string)
- * 
- */
-
-//#define LOG_ALL_MESSAGES
-//#define LOG_ADD_LISTENER
-//#define LOG_BROADCAST_MESSAGE
-#define REQUIRE_LISTENER
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
